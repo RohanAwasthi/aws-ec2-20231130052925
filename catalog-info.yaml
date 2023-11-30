@@ -1,0 +1,33 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "copilot-api-app-1"
+
+  links:
+    - url: https://github.com/ItRachii/aws-ec2-20231130052925
+      title: "copilot-api-app-1"
+      icon: code
+
+  labels:
+    system: web-apps
+    trackid: "aws-ec2-20231130052925"
+    environmentname: copilot-api-env-1
+
+  tags:
+    - java
+    - aws
+    - "applicationtype-webapplication"
+
+  annotations:
+    # add elastic beanstalk annotation
+    jenkins.io/github-folder: 'custom-actions/tf-copilot-api-app-1'
+    github.com/project-slug: ItRachii/aws-ec2-20231130052925
+    backstage.io/techdocs-ref: dir:.
+    backstage.io/linguist: https://github.com/ItRachii/spring-boot-ebs
+    sonarqube.org/project-key: 'demo-app/aws-elb-java'
+
+spec:
+  type: service
+  lifecycle: experimental
+  system: elasticbeanstalk
+  owner: "group:default/ey"
